@@ -1,0 +1,10 @@
+name: guesser
+
+services:
+  app:
+    build: .
+    image: ghcr.io/birabittoh/guesser:main
+    container_name: guesser
+    restart: unless-stopped
+    ports:
+      - 3000:3000

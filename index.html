@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Song</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>Guess the Song</h1>
+        <p>Generatore di reel per Guess the Song. Si prega di non abusare.</p>
+    </header>
+
+    <main>
+        <form action="/" method="POST" enctype="multipart/form-data" id="videoForm">
+            <label for="videoFile">Base video (es: guess.mp4):</label>
+            <input type="file" id="videoFile" name="videoFile" accept="video/*" required>
+
+            <label for="audioFile">Canzone (es: song.opus):</label>
+            <input type="file" id="audioFile" name="audioFile" accept="audio/*" required>
+
+            <label for="skip">Tempo di partenza della riproduzione audio (secondi):</label>
+            <input type="number" id="skip" name="skip" step="0.1" value="0" required>
+
+            <hr />
+
+            <label for="fade">Durata del fade-in e fade-out (secondi):</label>
+            <input type="number" id="fade" name="fade" step="0.1" value="1" required>
+
+            <label for="delay">Ritardo prima dell'inizio dell'audio (secondi):</label>
+            <input type="number" id="delay" name="delay" step="0.1" value="3" required>
+
+            <label for="duration">Durata della riproduzione dell'audio (secondi):</label>
+            <input type="number" id="duration" name="duration" step="0.1" value="14" required>
+
+            <p style="text-align: center;">
+                <button type="submit" onclick="this.disabled = true; document.getElementById('videoForm').submit();">Elabora</button>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>© <a href="https://linktr.ee/earthboundcafe">EarthBound Café</a>, realizzato da <a href="https://birabittoh.is-a.dev/">BiRabittoh</a>.</p>
+    </footer>
+    
+</body>
+</html>
